@@ -16,9 +16,10 @@ public class patientController {
 	Sender sender;
 	@PostMapping("/checker")
 public String getpatient(Model model,@ModelAttribute("check") checkpoji check) {
-	
+
 	List<EntityClass> list=sender.getDetails(check);
-if(list!=null) {
+
+if(list.size()>0) {
 	model.addAttribute("details",list);
 	}else
 	model.addAttribute("res","invalid record");

@@ -9,7 +9,9 @@ public class retriveClass {
 	@Autowired
 	Repointerface Repo;
 	public List<EntityClass> retrive(String name) {
+		
 		List<EntityClass> list=Repo.findBypname(name);
+		
 		return list;
 	}
 

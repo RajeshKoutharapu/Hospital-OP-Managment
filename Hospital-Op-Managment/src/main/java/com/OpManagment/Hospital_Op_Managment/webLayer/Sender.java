@@ -18,8 +18,9 @@ public class Sender {
 		reciver.recive(obj);
 	}
 	public  List <EntityClass> getDetails(checkpoji pojo) {
-		 
+		   
 		 List <EntityClass> list=reciver.recivedetails(pojo.getPname());
+		
 		 return list;
 		   
 	}

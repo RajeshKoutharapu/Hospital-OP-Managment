@@ -13,6 +13,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="optable")
 public class EntityClass {
+@Override
+	public String toString() {
+		return "EntityClass [id=" + id + ", pname=" + pname + ", plocation=" + plocation + ", page=" + page
+				+ ", pdoctor=" + pdoctor + ", rigesterDay=" + rigesterDay + ", lastDay=" + lastDay + "]";
+	}
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;

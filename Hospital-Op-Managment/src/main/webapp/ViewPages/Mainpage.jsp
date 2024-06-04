@@ -60,11 +60,18 @@
     }
     .checkdiv p{
         margin-left: 20px;
+        margin-right:20px
+        display: inline-blocks;
+    }
+    .checkdiv input{
+        height: 30px;
+        margin-right:20px;
         display: inline-blocks;
     }
     .checkdiv h1
     {
-        padding-left: 20px;
+        text-align:center;
+        padding-left: 80px;
         padding-right: 20px;
         display: inline;
     }
@@ -80,7 +87,7 @@
         padding-right: 25px;
         padding-top: 10px;
         padding-bottom: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
         margin-top: 50px;
 
     }
@@ -93,10 +100,24 @@
         color: gray;
         background-color: white;
     }
+    .heading{
+    height:100px;
+    background-color: gray;
+    border-radius: 3px;
+    }
+    .heading h1{
+    text-align: center;
+   padding-top: 40px;
+   color: white;
     
+  
+          }
   </style>
     </head>
     <body>
+    <div class="heading">
+             <h1> <marquee>DR.RAJESH HOSPITALS AND DIOGONSITS</marquee></h1>
+    </div>
         <div class="entire">
         <div class="registerdiv">
             <form action="register" method="post"> 
@@ -111,7 +132,7 @@
         </div>
         <form action="checker" method="post">
         <div class="checkdiv">
-            <h1>Patient Registration Checking</h1>
+            <h1>Op Status Checking</h1>
             <p>Patient name<input type="text" name="pname" placeholder="entercorrect name"></p> 
             <button>Submit</button>
           
