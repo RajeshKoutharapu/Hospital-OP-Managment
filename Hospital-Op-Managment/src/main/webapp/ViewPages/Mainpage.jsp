@@ -130,7 +130,7 @@
       <button>Submit</button>
  </form>
         </div>
-        <form action="checker" method="post">
+        <form action="checker" method="get">
         <div class="checkdiv">
             <h1>Op Status Checking</h1>
             <p>Patient name<input type="text" name="pname" placeholder="entercorrect name"></p> 

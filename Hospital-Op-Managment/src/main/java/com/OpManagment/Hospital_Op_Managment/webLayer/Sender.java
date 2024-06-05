@@ -17,9 +17,9 @@ public class Sender {
 	public void send (rigesterDetails obj) {
 		reciver.recive(obj);
 	}
-	public  List <EntityClass> getDetails(checkpoji pojo) {
+	public  List <EntityClass> getDetails(String check) {
 		   
-		 List <EntityClass> list=reciver.recivedetails(pojo.getPname());
+		 List <EntityClass> list=reciver.recivedetails(check);
 		
 		 return list;
 		   
