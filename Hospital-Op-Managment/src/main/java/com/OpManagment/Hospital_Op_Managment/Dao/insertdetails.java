@@ -20,9 +20,7 @@ public class insertdetails {
         obj.setPname( info.getPname());
         obj.setRigesterDay(rigesterDay);
 	    obj.setLastDay(lastDay);
-	    
-		
-		repo.save(obj);
+	    repo.save(obj);
 	}
 
 }

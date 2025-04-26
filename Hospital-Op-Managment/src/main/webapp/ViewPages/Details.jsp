@@ -44,17 +44,20 @@
 <body>
 <form action="back" method="get">
 <div class="heading">
-             <h1> PATIENT DETAILS</h1>
+             <h1> COUSTMER DETAILS</h1>
     </div>
     <div class="infodiv">
     <c:forEach var="item" items="${details}">
-  <p> Name : ${item.getPname()}</p>
+  <p> Id : ${item.id}</p>
   <hr>
-    <p>Location :${item.getPlocation()}</p>  <hr>
-      <p>Age : ${item.getPage()}</p>  <hr>
-        <p> Doctor name:${item.getPdoctor()}</p>  <hr>
-          <p> RigesterDay :${item.getRigesterDay()}</p>  <hr>
-            <p> Expires on :${item.getLastDay()}</p>
+    <p>Name :${item.pname}</p>  <hr>
+      <p>Location : ${item.plocation}</p>  <hr>
+        <p> Age :${item.page}</p>  <hr>
+          <p> Doctor name :${item.pdoctor}</p>  <hr>
+           <p> RigesterDay :${item.rigesterDay}</p>  <hr>
+            <p> Expires on :${item.lastDay}</p>  <hr>
+          
+            
 </c:forEach></div>
 
          <h3 style="color:red; text-align: center"> ${res}</h3>

@@ -1,145 +1,142 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-    <head>
-  <style>
-    .entire{
+<head>
+<meta charset="ISO-8859-1">
+<title>Hospital Operation Management</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f9;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        background-color: #34495e;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 40px;
+        flex-wrap: wrap;
     }
-    .registerdiv{
-    margin-top: 100px;
-    margin-left: 100px;
-    width: 500px;
-    border-style:solid;
-    border-radius: 2px;
-    border-color: gray;
-
-
-    }
-    .registerdiv input{
-        height: 30px;
-        width: 300px;
-        margin-left: 30px;
-
-    }
-    .registerdiv p{
-        margin-left: 20px;
-        display: inline-blocks;
-    }
-    .registerdiv button{
-        margin-left: 250px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
-
-    }
-    .registerdiv h1
-    {
-        padding-left: 100px;
-        display: inline;
-    }
-    .registerdiv button:hover{
-        color: white;
-        background-color: gray;
-        border-style: none;
-    }
-    .registerdiv button:active{
-        color: gray;
+    .card {
         background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 30px;
+        border-radius: 8px;
+        width: 400px;
+        margin: 20px;
     }
-    .checkdiv{
-        margin-left: 200px;
-        margin-top: 100px;
-        border-style:solid;
-    border-radius: 2px;
-    border-color: gray;
+    .card h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2c3e50;
     }
-    .checkdiv p{
-        margin-left: 20px;
-        margin-right:20px
-        display: inline-blocks;
+    .card label {
+        display: block;
+        margin: 10px 0 5px;
+        color: #34495e;
     }
-    .checkdiv input{
-        height: 30px;
-        margin-right:20px;
-        display: inline-blocks;
+    .card input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
-    .checkdiv h1
-    {
-        text-align:center;
-        padding-left: 80px;
-        padding-right: 20px;
-        display: inline;
-    }
-    .checkdiv input{
-        height: 30px;
-        width: 300px;
-        margin-left: 30px;
-
-    }
-    .checkdiv button{
-        margin-left: 200px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 40px;
-        margin-top: 50px;
-
-    }
-    .checkdiv button:hover{
+    .card button {
+        background-color: #2c3e50;
         color: white;
-        background-color: gray;
-        border-style: none;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
     }
-    .checkdiv button:active{
-        color: gray;
-        background-color: white;
+    .card button:hover {
+        background-color: #1abc9c;
     }
-    .heading{
-    height:100px;
-    background-color: gray;
-    border-radius: 3px;
+    .footer-action {
+        text-align: center;
+        margin-top: 30px;
     }
-    .heading h1{
-    text-align: center;
-   padding-top: 40px;
-   color: white;
-    
-  
-          }
-  </style>
-    </head>
-    <body>
-    <div class="heading">
-             <h1> <marquee>DR.RAJESH HOSPITALS AND DIOGONSITS</marquee></h1>
+    .footer-action form button {
+        width: 200px;
+        margin: 0 auto;
+        background-color: #2980b9;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">Dr. Rajesh Hospitals & Diagnostics</div>
+
+<div class="container">
+    <!-- Patient Registration -->
+    <div class="card">
+        <h2>Patient Registration</h2>
+        <form action="register" method="post">
+            <label for="pname">Patient Name</label>
+            <input type="text" name="pname" required>
+
+            <label for="plocation">Patient Location</label>
+            <input type="text" name="plocation" required>
+
+            <label for="page">Patient Age</label>
+            <input type="number" name="page" required>
+
+            <label for="pgender">Patient Gender</label>
+            <input type="text" name="pgender" required>
+
+            <label for="pdoctor">Doctor Reference</label>
+            <input type="text" name="pdoctor" required>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
-        <div class="entire">
-        <div class="registerdiv">
-            <form action="register" method="post"> 
-            <h1>Patient Registration</h1>
-   <p>Patient name<input type="text" name="pname" required="required"></p> 
-   <p>Patient Location<input type="text" name="plocation" required="required"></p> 
-      <p>Patient Age<input type="number" name="page" required="required"></p> 
-     <p>Patient Gender<input type="text" name="pgender" required="required"></p> 
-      <p>Doctor Reference<input type="text" name="pdoctor" required="required"></p> 
-      <button>Submit</button>
- </form>
-        </div>
+
+    <!-- OP Status Check -->
+    <div class="card">
+        <h2>OP Status Check</h2>
         <form action="checker" method="get">
-        <div class="checkdiv">
-            <h1>Op Status Checking</h1>
-            <p>Patient name<input type="text" name="pname" placeholder="entercorrect name"></p> 
-            <button>Submit</button>
-          
-        </div> </form>
-          
-     
-      
+            <label for="pname">Patient Name</label>
+            <input type="text" name="pname" placeholder="Enter correct name" required>
+            <button type="submit">Check Status</button>
+        </form>
     </div>
-    </body>
+
+    <!-- Admit Patient -->
+    <div class="card">
+        <h2>Admit Patient</h2>
+        <form action="admit" method="post">
+            <label for="patientId">Patient ID</label>
+            <input type="number" name="patientId" required>
+
+            <label for="wardId">Ward Number</label>
+            <input type="text" name="wardId" required>
+
+            <label for="bedNumber">Bed Number</label>
+            <input type="number" name="bedNumber" required>
+
+            <button type="submit">Admit</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="footer-action">
+    <form action="/ward" method="get">
+        <button type="submit">Manage Wards</button>
+    </form>
+</div>
+
+</body>
 </html>
